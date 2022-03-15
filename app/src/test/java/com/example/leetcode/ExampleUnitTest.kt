@@ -20,5 +20,25 @@ class ExampleUnitTest {
         )
     }
 
+    @Test
+    fun test_Merge_k_Sorted_Lists(){
+        val leetcode23 = LeetCode_23()
+        //[[1,4,5],[1,3,4],[2,6]]
+        val first = ListNode23(1)
+        first.next = ListNode23(4)
+        first.next?.next = ListNode23(5)
+        //-----------------------
+        val second  = ListNode23(1)
+        second.next = ListNode23(3)
+        second.next?.next = ListNode23(4)
+        //-------------------------
+        val third  = ListNode23(2)
+        third.next = ListNode23(6)
+
+        val array:Array<ListNode23?> = arrayOf(first,second,third)
+        val listNode23 = leetcode23.mergeKLists(array)
+        assert(leetcode23.junit(listNode23,intArrayOf(1,1,2,3,4,4,5,6)))
+
+    }
 
 }
