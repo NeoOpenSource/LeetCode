@@ -54,7 +54,7 @@ class LeetCode_23 {
         return head.next
     }
 
-    fun junit(listNode23: ListNode23?, testData: IntArray):Boolean{
+    fun junit(listNode23: ListNode23?, testData: IntArray): Boolean {
         if (listNode23 == null) {
             throw Exception("listNode23 is null ")
         }
