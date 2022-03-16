@@ -38,7 +38,18 @@ class ExampleUnitTest {
         val array:Array<ListNode23?> = arrayOf(first,second,third)
         val listNode23 = leetcode23.mergeKLists(array)
         assert(leetcode23.junit(listNode23,intArrayOf(1,1,2,3,4,4,5,6)))
+    }
 
+
+    @Test
+    fun test_Swap_Nodes_in_Pairs(){
+        val leetcode24 = LeetCode_24()
+        val data = ListNode24(1)
+        data.next = ListNode24(2)
+        data.next?.next = ListNode24(3)
+        data.next?.next?.next = ListNode24(4)
+        val listNode24 = leetcode24.swapPairs(data)
+        assert(leetcode24.junit(listNode24,intArrayOf(2,1,4,3)))
     }
 
 }
